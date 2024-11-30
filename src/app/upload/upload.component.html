@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Upload de Arquivo Alteração Previdência 2.1.6</h2>
+    <div>
+      <input type="file" (change)="onFileSelected($event)" />
+
+    </div>
+  
+    <div *ngIf="uploadResponse" class="response">
+      <p>{{ uploadResponse }}</p>
+    </div>
+  
+    <button (click)="uploadFile()" [disabled]="!selectedFile">Enviar Arquivo</button>
+  </div>
+  
